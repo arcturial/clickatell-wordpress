@@ -4,7 +4,6 @@ require_once __DIR__ . '/db.php';
 use Clickatell\Otp\SessionStorage;
 use Clickatell\Api\ClickatellRest;
 use Clickatell\Otp\ClickatellOtp;
-use \Exception;
 
 /**
  * Get the storage mechanism we will use for storing OTP's
