@@ -91,6 +91,10 @@ function click_verify_otp($number, $token, $user)
  */
 function click_render_otp_page($id, $number, $error = null)
 {
+    if ( !function_exists('login_header')) {
+        require_once(ABSPATH . 'wp-login.php');
+    }
+    
     login_header(__('Log In - Verify OTP'), '', $error);
     $url = esc_url(site_url('wp-login.php', 'login_post'));
 
